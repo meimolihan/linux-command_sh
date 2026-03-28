@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+package-lock.json
+.deploy
+.DS_Store
+Git-拉取更新.bat
+Git-推送更新.bat
