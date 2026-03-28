@@ -9,7 +9,7 @@ list_color_init() {
     export gl_bai=$'\033[38;5;15m'
     export gl_zi=$'\033[38;5;13m'
     export gl_bufan=$'\033[38;5;14m'
-    export list_color_reset=$'\033[0m'
+    export reset=$'\033[0m'
 }
 list_color_init
 
@@ -68,12 +68,12 @@ list_beautify_cpu_info() {
             local value_color="$3"
             
             if [ -n "$value" ]; then
-                printf "%s%s\t%s%s%s\n" "$gl_lan" "$label" "$list_color_reset" "$value_color" "$value"
+                printf "%s%s\t%s%s%s\n" "$gl_lan" "$label" "$reset" "$value_color" "$value"
             fi
         }
         
-        printf "%s%s\t%s%s\n" "$gl_hui" "CPU 信息" "值" "$list_color_reset"
-        printf "%s%s\t%s%s\n" "$gl_hui" "----------------" "-----------------------------------------" "$list_color_reset"
+        printf "%s%s\t%s%s\n" "$gl_hui" "CPU 信息" "值" "$reset"
+        printf "%s%s\t%s%s\n" "$gl_hui" "----------------" "-----------------------------------------" "$reset"
         printf "\n"
         
         show_row "架构" "$architecture" "$gl_huang"
